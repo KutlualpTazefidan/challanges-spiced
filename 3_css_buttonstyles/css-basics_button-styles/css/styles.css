@@ -30,8 +30,10 @@ button {
 /* Add your CSS styles below this line. Feel free to replace the comments with your code. Make sure not to put your code into the comments, because then nothing will happen. */
 
 .button1 {
+  color: aqua;
   border: 100px;
   border-radius: 50px;
+  border-style: dotted;
   /*Style me! Change my border, set a border radius or what you want to try out. :) */
 }
 
