@@ -6,16 +6,67 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #BDCDD6;
 }
 
 header {
     text-align: center;
-    font-size: 100px;
-    color: white;
+    margin: 20px 0 20px 0;
 }
-
-nav {}
 
 form {
     display: inline;
+    margin: 0 10px 0 10px;
+}
+
+input {
+    background-color: #bdd6d1;
+    color: #EEE9DA;
+    padding: 10px;
+    border-radius: 50px;
+    border: none;
+    width: 150px;
+}
+
+b {
+    font-size: 50px;
+    color: white;
+}
+
+hr {
+    margin: 20px 0 20px 0;
+}
+
+p {
+    color: #EEE9DA;
+}
+
+section {
+    text-align: center;
+}
+
+#home {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#aboutme {
+    margin-bottom: 50px;
+}
+
+#currentprojects {
+    margin-bottom: 50px;
+}
+
+input:hover {
+    background-color: #6096B4;
+}
+
+input:active {
+    background-color: #93BFCF;
+}
+
+h2 {
+    margin: 20px 0 20px 0;
+    color: #EEE9DA;
 }
