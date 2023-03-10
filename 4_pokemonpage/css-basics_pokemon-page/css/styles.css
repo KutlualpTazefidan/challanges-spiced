@@ -3,15 +3,15 @@
 /* ------- General Styles ------- */
 
 /* Task 1: First of all we want to adjust how the size of our elements is calculated when working with CSS. Do you know how to switch from "content-box" to "border-box"? */
-*{
-  box-sizing: border-box;
-}
+
+
 /* your solution */
 
 /* Task 2: Let's work on some basic stylings that we want to apply to all elements of your code via inheritance. Which selector do we need for this? */
 
 /* add selector */
 * {
+  box-sizing: border-box;
   font-family: monospace;
   font-size: 1rem;
   line-height: 1.5;
@@ -25,6 +25,7 @@ h1,
 h2 {
   line-height: 1.2;
 }
+
 /* your solution */
 
 /* Task 4: Now we want to give our h1 element more styles to shine! Add the following styles by writing the correct declarations inside of the declaration block of the next CSS rule:
@@ -72,11 +73,12 @@ section {
 */
 
 .subtitle {
-  text-decoration: 3px solid gold underline;/* your solution */
+  text-decoration: 3px solid gold underline;
+  /* your solution */
   text-underline-position: under;
 }
 
-.subtitle.favorites {
+.favourites .subtitle {
   text-decoration: 3px solid orange underline;
 }
 
@@ -85,15 +87,16 @@ section {
 /* Task 7: Last but not least! We want to style our list with our favorite Pokémon. Which selector do we need? And also add values for the padding. */
 
 /* add selector */
- {
+li {
+  padding-left: 10px;
+}
+
+li:first-child {
   list-style: "🧡";
-  padding-left: /* add value */ ;
+  padding-left: 10px;
 }
 
 /* add selector */
- {
-  padding-left: /* add value */ ;
-}
 
 /* ------- The End -------- */
 
