@@ -33,7 +33,7 @@ button {
   color: aqua;
   border: 100px;
   border-radius: 50px;
-  border-style: dotted;
+  border-style: double;
   /*Style me! Change my border, set a border radius or what you want to try out. :) */
 }
 
