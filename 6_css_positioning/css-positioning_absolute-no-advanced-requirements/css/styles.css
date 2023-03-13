@@ -42,7 +42,7 @@ main {
 .box--top-center {
   position: absolute;
   top: 0;
-  left: 210px;
+  left: calc(50% - 40px);
   background-color: #85c1e9;
 
 }
@@ -56,28 +56,28 @@ main {
 
 .box--center {
   position: absolute;
-  top: 260px;
-  left: 210px;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
   background-color: #3498db;
 }
 
 .box--bottom-left {
   position: absolute;
-  top: 520px;
+  top: calc(100% - 80px);
   left: 0;
   background-color: #2874a6;
 }
 
 .box--bottom-center {
   position: absolute;
-  top: 520px;
-  left: 210px;
+  top: calc(100% - 80px);
+  left: calc(50% - 40px);
   background-color: #21618c;
 }
 
 .box--bottom-right {
   position: absolute;
-  top: 520px;
+  top: calc(100% - 80px);
   right: 0;
   background-color: #1b4f72;
 }
