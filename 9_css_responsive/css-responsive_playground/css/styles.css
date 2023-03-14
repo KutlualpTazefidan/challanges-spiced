@@ -62,8 +62,8 @@ h1 {
 .box--one {
   background-color: lightblue;
 
-  width: 10%;
-  height: 10%;
+  width: 20%;
+  height: 20%;
 }
 
 .box--two {
@@ -93,4 +93,37 @@ h1 {
 
 .box--five img {
   width: 100%;
+}
+
+@media (min-width: 600px) {
+  .box--two {
+    width: 200px;
+  }
+
+  img {
+    content: url("/img/cat_medium.jpg");
+  }
+}
+
+@media (min-width: 1199px) {
+  .box--two {
+    width: 400px;
+  }
+
+  img {
+    content: url("/img/cat_large.jpg");
+  }
+}
+
+@media (orientation:landscape) {
+  .box--three {
+    width: 250px;
+    height: 50px;
+  }
+}
+
+@media (prefers-color-scheme:dark) {
+  .box--four {
+    background-color: rgb(68, 68, 68);
+  }
 }
