@@ -15,12 +15,18 @@ body {
 }
 
 .profile__image {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 50%;
   max-width: 50%;
   height: auto;
 }
 
 .tech-stack__list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
 }
