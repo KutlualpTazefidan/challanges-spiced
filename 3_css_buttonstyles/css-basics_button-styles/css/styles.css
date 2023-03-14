@@ -33,7 +33,7 @@ button {
   color: aqua;
   border: 100px;
   border-radius: 50px;
-  border-style: dotted;
+  border-style: double;
   /*Style me! Change my border, set a border radius or what you want to try out. :) */
 }
 
@@ -53,5 +53,3 @@ button {
   box-shadow: 5px 10px #888888;
   /*Style me! Can you add a shadow to this button? Maybe play around with the shadow properties, as well? You can even color the shadow, make it bigger or smaller, ... */
 }
-
-/* Feel free to play around with other properties, as well. */
