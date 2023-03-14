@@ -15,13 +15,21 @@ body {
 }
 
 .profile__image {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
+
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  align-self: center;
+  gap: 50px;
   border-radius: 50%;
   max-width: 50%;
   height: auto;
 }
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .tech-stack__list {
   display: flex;
