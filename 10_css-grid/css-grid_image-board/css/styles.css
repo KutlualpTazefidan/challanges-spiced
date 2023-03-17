@@ -20,6 +20,9 @@ body {
   grid-template-rows: 300px 200px 300px;
   gap: 1rem;
   padding: 1rem;
+  grid-template-areas: "first second third"
+    "forth fifth sixth";
+
   /* Add styles here */
 }
 
@@ -32,25 +35,31 @@ body {
 }
 
 .image-board__image--1 {
-  /* Add styles here */
+  grid-area: first;
+  grid-area: 1 / 1 / 2 / 2;
 }
 
 .image-board__image--2 {
-  /* Add styles here */
+  grid-area: second;
+  grid-area: 1 / 2 / 3 / 3;
 }
 
 .image-board__image--3 {
-  /* Add styles here */
+  grid-area: third;
+  grid-area: 1 / 3 / 2 / 4;
 }
 
 .image-board__image--4 {
-  /* Add styles here */
+  grid-area: forth;
+  grid-area: 2 / 1 / 4 / 2;
 }
 
 .image-board__image--5 {
-  /* Add styles here */
+  grid-area: fifth;
+  grid-area: 3 / 2 / 4 / 3;
 }
 
 .image-board__image--6 {
-  /* Add styles here */
+  grid-area: sixth;
+  grid-area: 2 / 3 / 4 / 4;
 }
