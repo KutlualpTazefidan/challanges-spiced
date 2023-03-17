@@ -10,11 +10,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-let title = "Title";
-let text = "Comments";
+const title = "Title";
+const text = "Comments";
 let numberOfLikes = 0;
-let userName = "User Name";
-let isReported = true;
+const userName = "User Name";
+const isReported = true;
 // --^-- write your code here --^--
 
 /*
