@@ -12,19 +12,30 @@ We want to add some functionality to the buttons on this page. When pressing a b
 */
 
 redButton.addEventListener("click", () => {
-  // Code here
+  RemoveAllColors();
+  AddColor("red");
 });
 
 blueButton.addEventListener("click", () => {
-  // Code here
+  RemoveAllColors();
+  AddColor("blue");
 });
 
 greenButton.addEventListener("click", () => {
-  // Code here
+  RemoveAllColors();
+  AddColor("green");
 });
 
 grayButton.addEventListener("click", () => {
-  // Code here
+  RemoveAllColors();
+  AddColor("gray");
 });
 
+function RemoveAllColors() {
+  box.classList.remove("gray", "red", "blue", "green");
+}
+
+function AddColor(color) {
+  box.classList.add(color);
+}
 // Write your two functions below:
