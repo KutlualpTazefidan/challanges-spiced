@@ -13,32 +13,29 @@ We want to add some functionality to the buttons on this page. When pressing a b
 
 redButton.addEventListener("click", () => {
   RemoveAllColors();
-  AddColor(redButton);
+  AddColor("red");
 });
 
 blueButton.addEventListener("click", () => {
   RemoveAllColors();
-  AddColor(blueButton);
+  AddColor("blue");
 });
 
 greenButton.addEventListener("click", () => {
   RemoveAllColors();
-  AddColor(greenButton);
+  AddColor("green");
 });
 
 grayButton.addEventListener("click", () => {
   RemoveAllColors();
-  AddColor(grayButton);
+  AddColor("gray");
 });
 
 function RemoveAllColors() {
-  if (box.classList.length > 1) {
-    box.classList.remove(box.classList[box.classList.length - 1]);
-  }
+  box.classList.remove("gray", "red", "blue", "green");
 }
 
-function AddColor(button) {
-  box.classList.add(button.textContent);
-  console.log(box.classList);
+function AddColor(color) {
+  box.classList.add(color);
 }
 // Write your two functions below:
