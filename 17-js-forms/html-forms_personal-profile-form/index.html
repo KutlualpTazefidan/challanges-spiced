@@ -10,6 +10,40 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <section></section>
+    <h2 id="title">Create your Personal Profile</h2>
+    <form aria-labelledby="title">
+      <h4>
+        We want to get to know you! Please enter your personal information.
+      </h4>
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="firstname">First Name:</label>
+        <input type="text" name="firstname" id="firstname" />
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" id="lastname" />
+        <label for="birthday">Your Birthday</label>
+        <input type="date" name="birthday" id="birthday" />
+      </fieldset>
+      <h4>
+        Can you tell us a little bit more? We want to annoy you with unwated ads
+      </h4>
+      <fieldset>
+        <legend>Further Information</legend>
+        <label for="favourite-color"></label>
+        <input
+          type="color"
+          name="favourite-color"
+          id="favourite-color"
+          value="#FF0000"
+        />
+        <label for="favourite-pet">What's your favourite pet?</label>
+        <select name="favourite-pet" id="favourite-pet">
+          <option value="dog">dog</option>
+          <option value="cat">cat</option>
+          <option value="tiger">tiger</option>
+        </select>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
