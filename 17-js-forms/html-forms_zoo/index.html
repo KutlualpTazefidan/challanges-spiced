@@ -21,21 +21,58 @@
           <legend>Enter your information</legend>
 
           <!-- Email: label & input -->
+          <label for="email">Enter your email adress:</label>
+          <input type="email" name="email" id="email" />
 
           <!-- Date: label & input -->
+          <label for="date">When is your arrival day?</label>
+
+          <input type="date" name="date" id="date" />
 
           <fieldset class="radio-options">
             <legend>Which one of these animals would you like to visit?</legend>
 
             <!-- Radio Buttons: labels & inputs -->
+            <label for="relaxed-sloths">relaxed sloths</label>
+            <input
+              type="radio"
+              name="special-attraction"
+              id="relaxed-sloths"
+              value="relaxed-sloths"
+            />
+            <label for="jumpy-kangaroos">jumpy kangaroos</label>
+            <input
+              type="radio"
+              name="special-attraction"
+              id="jumpy-kangaroos"
+              value="jumpy-kangaroos"
+            />
+            <label for="thieving-racoons">relaxed sloths</label>
+            <input
+              type="radio"
+              name="special-attraction"
+              id="thieving-racoons"
+              value="thieving-racoons"
+            />
           </fieldset>
 
           <!-- Textarea: label & input -->
+          <label for="comment">Please leave a comment:</label>
+          <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
 
           <!-- Two Checkboxes: labels & inputs -->
-
+          <label for="consent-data">
+            Are we allowed to sell your data?
+            <input type="checkbox" name="consent-data" id="consent-data"
+          /></label>
+          <label for="spam-email">
+            Ready for annoying emails?
+            <input type="checkbox" name="consent-data" id="spam-email"
+          /></label>
           <!-- Two Buttons: reset & submit -->
         </fieldset>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
       </form>
     </section>
   </body>
