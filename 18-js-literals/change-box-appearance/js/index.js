@@ -24,9 +24,7 @@ boxElement = document.querySelector('[data-js="box"]');
 
 colorSlider.addEventListener("input", () => {
   console.log(colorSlider.value);
-  boxElement.style.backgroundColor = `hsl(${
-    (colorSlider.value * 100) / 360
-  },50%,50%)`;
+  boxElement.style.backgroundColor = `hsl(${colorSlider.value},50%,50%)`;
 });
 
 radiusSlider.addEventListener("input", () => {
