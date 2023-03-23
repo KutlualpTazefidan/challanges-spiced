@@ -2,7 +2,6 @@ console.clear();
 
 const form = document.querySelector('[data-js="form"]');
 const resultOutput = document.querySelector('[data-js="result"]');
-const radioButtons = document.getElementsByName("operator");
 
 function add(a, b) {
   return a + b;
@@ -27,9 +26,9 @@ form.addEventListener("submit", (event) => {
   // --v-- write your code here --v--
   let formData = new FormData(event.target);
   formArray = Object.fromEntries(formData);
-  console.log(formArray.numberA);
   const numberA = parseInt(formArray.numberA);
   const numberB = parseInt(formArray.numberB);
+  const radioButtons = form.operator;
   for (let i = 0; i < radioButtons.length; i++) {
     console.log(radioButtons[i].checked);
     if (radioButtons[i].checked) {
