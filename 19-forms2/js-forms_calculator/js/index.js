@@ -23,9 +23,31 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   let result;
-
   // --v-- write your code here --v--
-
+  let formData = new FormData(event.target);
+  formArray = Object.fromEntries(formData);
+  const numberA = parseInt(formArray.numberA);
+  const numberB = parseInt(formArray.numberB);
+  const radioButtons = form.operator;
+  for (let i = 0; i < radioButtons.length; i++) {
+    console.log(radioButtons[i].checked);
+    if (radioButtons[i].checked) {
+      switch (radioButtons[i].value) {
+        case "addition":
+          result = add(numberA, numberB);
+          break;
+        case "subtraction":
+          result = subtract(numberA, numberB);
+          break;
+        case "multiplication":
+          result = multiply(numberA, numberB);
+          break;
+        case "division":
+          result = divide(numberA, numberB);
+          break;
+      }
+    }
+  }
   // --^-- write your code here --^--
 
   resultOutput.textContent = result;
