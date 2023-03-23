@@ -27,7 +27,7 @@ form.addEventListener("submit", (event) => {
   const numberA = parseInt(document.getElementById("number-a").value);
   const numberB = parseInt(document.getElementById("number-b").value);
   const radioButtons = document.getElementsByName("operator");
-  for (i = 0; i < radioButtons.length; i++) {
+  for (let i = 0; i < radioButtons.length; i++) {
     console.log(radioButtons[i].checked);
     if (radioButtons[i].checked) {
       switch (radioButtons[i].value) {
