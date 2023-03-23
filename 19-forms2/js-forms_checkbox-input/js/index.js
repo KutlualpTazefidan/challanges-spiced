@@ -11,13 +11,18 @@ function showTosError() {
   tosError.removeAttribute("hidden");
 }
 
+hideTosError();
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // --v-- write your code here --v--
-
+  if (!document.getElementById("tos").checked) {
+    showTosError();
+    return;
+  }
+  hideTosError();
   // --^-- write your code here --^--
 
-  // eslint-disable-next-line no-alert
   alert("Form submitted");
+  // eslint-disable-next-line no-alert
 });
