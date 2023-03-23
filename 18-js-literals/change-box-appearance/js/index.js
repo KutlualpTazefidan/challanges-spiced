@@ -28,7 +28,7 @@ colorSlider.addEventListener("input", () => {
 });
 
 radiusSlider.addEventListener("input", () => {
-  boxElement.style["border-radius"] = radiusSlider.value + "px";
+  boxElement.style["border-radius"] = `${radiusSlider.value}%`;
 });
 rotationSlider.addEventListener("input", () => {
   boxElement.style.transform = `rotate(${rotationSlider.value}deg)`;
