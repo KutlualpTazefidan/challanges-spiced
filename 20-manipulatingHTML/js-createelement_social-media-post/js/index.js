@@ -11,26 +11,28 @@ likeButton.addEventListener("click", handleLikeButtonClick);
 // Exercise:
 // Use document.createElement() and append another social media post to the body.
 
-let newSocialMediaPost = document.createElement("article");
+const newSocialMediaPost = document.createElement("article");
 newSocialMediaPost.classList.add("post");
 
-let newSocialMediaPostText = document.createElement("p");
+const newSocialMediaPostText = document.createElement("p");
 newSocialMediaPostText.classList.add("post__content");
 newSocialMediaPostText.innerText =
   "Lorem ipsum dolor, sit amet consectetur adipisicing elit.";
 
-let newSocialMediaPostFooter = document.createElement("footer");
+const newSocialMediaPostFooter = document.createElement("footer");
 newSocialMediaPostFooter.classList.add("post__footer");
 
-let newSocialMediaPostUsername = document.createElement("span");
+const newSocialMediaPostUsername = document.createElement("span");
 newSocialMediaPostUsername.classList.add("post__username");
 newSocialMediaPostUsername.innerText = "@username2";
 
-let newSocialMediaPostButton = document.createElement("button");
-newSocialMediaPostButton.type = "button";
-newSocialMediaPostButton.setAttribute("data-js", "like-button");
+const newSocialMediaPostButton = document.createElement("button");
+// newSocialMediaPostButton.type = "button";
+newSocialMediaPostButton.setAttribute("type", "button");
 newSocialMediaPostButton.classList.add("post__button");
+newSocialMediaPostButton.setAttribute("data-js", "like-button");
 newSocialMediaPostButton.innerText = "♥ Like";
+newSocialMediaPostButton.addEventListener("click", handleLikeButtonClick);
 
 newSocialMediaPost.appendChild(newSocialMediaPostText);
 
