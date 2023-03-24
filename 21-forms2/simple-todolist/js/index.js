@@ -23,4 +23,8 @@ form.addEventListener("submit", (e) => {
   todoElement.append(taskElement);
   todoList.append(todoElement);
   console.log(todoElement);
+
+  // reset form
+  e.target.reset();
+  form.headline.focus();
 });
