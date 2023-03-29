@@ -37,12 +37,13 @@ const allCardsThatAreNotBookmarked = cards.filter((card) => {
 // console.log("allCardsThatAreNotBookmarked", allCardsThatAreNotBookmarked[0]);
 
 const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => {
-  return card.tags.map((tag) => tag === "HTML") && card.isBookmarked;
+  return (
+    (card.tags.map((tag) => tag === "HTML") ||
+      card.tags.map((tag) => tag === "HTML")) &&
+    card.isBookmarked
+  );
 });
-// console.log(
-//   "allCardsWithTagsHTMLOrJSThatAreBookmarked",
-//   allCardsWithTagsHTMLOrJSThatAreBookmarked[0]
-// );
+console.table(allCardsWithTagsHTMLOrJSThatAreBookmarked[0]);
 
 export {
   onlyCardWithIdTwo,
