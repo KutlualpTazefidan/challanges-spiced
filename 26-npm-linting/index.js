@@ -1,4 +1,4 @@
-const cards = document.querySelectorAll('[data-js=card]');
+const cards = document.querySelectorAll('[data-js="card"]');
 // const button = document.querySelectorAll('[data-js=buttons]');
 cards.forEach(card => {
   const button = card.querySelector('[data-js="button"]');
