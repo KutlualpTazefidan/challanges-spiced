@@ -129,8 +129,6 @@ for (let index = 0; index < pixelValues.length; index++) {
     pixelElements = document.createElement("div");
     pixelElements.classList.add("pixel");
     pixelElements.style.backgroundColor = pixelValues[index][colors];
-    // console.log(pixelElements);
     canvas.append(pixelElements);
-    // console.log(pixelValues[index][colors]);
   }
 }
