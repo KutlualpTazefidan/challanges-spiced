@@ -50,7 +50,7 @@ console.log(animalsSortedAlphabetically);
 const anyAnimalEndsWithLetterZ = animalStrings.filter((animal) =>
   animal.endsWith("z")
 );
-console.log(anyAnimalEndsWithLetterZ);
+console.log("z", anyAnimalEndsWithLetterZ);
 
 const everyAnimalHasMoreThanTwoLetters = animalStrings.filter(
   (animal) => animal.length > 2
