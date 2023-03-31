@@ -19,11 +19,18 @@ function checkIfApiIsAvailable() {
    * is okay and false if it is not.
    **/
   // --v-- write your code here --v--
-  async function apiStatus() {
-    const apiStatus = await fetch(apiStatusUrl);
+  async function apiStatus(e) {
+    try {
+      apiStatusAfterFetch = await fetch(apiStatusUrl);
+      apiStatusAfterFetch.ok
+        ? (icon.innerText = "✅")
+        : (icon.innerText = "❌");
+    } catch (error) {
+      console.log("Error");
+    }
   }
-  apiStatus ? (icon.innerText = "ok") : (icon.innerText = "false");
-  // --^-- write your code here --^--
+  apiStatus();
+  icon.innerText = "⏳";
 }
 
 button.addEventListener("click", () => {
