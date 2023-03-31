@@ -62,7 +62,36 @@ spinButton.addEventListener("click", async () => {
    * and make sure it is always executed after the wheels have stopped,
    * even if an error was thrown.
    */
+  try {
+    result.setSpinning();
+    const slotMachineResults = await Promise.all([
+      wheel1.spin(),
+      wheel2.spin(),
+      wheel3.spin(),
+    ]);
 
+    console.log(slotMachineResults);
+
+    // const slotMachineResultsArray = [];
+    // slotMachineResultsArray.push(...slotMachineResults);
+    console.log(slotMachineResults);
+    const results = getMaxCount(slotMachineResults);
+    console.log(results);
+    let points = 0;
+    if (results === 1) {
+      points += 0;
+    } else if (results === 2) {
+      points += 10;
+    } else points = 100;
+    result.setResult(points);
+    console.log(points);
+  } catch (error) {
+    result.setMachineChoked();
+    console.log("You should go home and rest.");
+  }
+
+  spinButton.disabled = false;
+});
   spinButton.disabled = false;
 });
 
