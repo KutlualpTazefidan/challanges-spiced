@@ -20,6 +20,10 @@ export async function fetchNewColor() {
   // --v-- your code here --v--
   try {
     const response = await fetch(colorApiUrl);
+    if (!response.ok) {
+      console.error("Bad Request");
+      return;
+    }
     const colorData = await response.json();
     console.log(
       colorData.name.closest_named_hex,
