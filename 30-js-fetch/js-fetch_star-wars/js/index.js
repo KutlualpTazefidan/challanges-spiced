@@ -41,6 +41,15 @@ fetchDataAndRender();
 
 // --v-- your code below this line --v--
 
-function fetchDataAndRender() {
-  fetch(); // ?
+async function fetchDataAndRender() {
+  try {
+    const response = await fetch("https://swapi.dev/api/people/");
+    const starWarsData = await response.json();
+    starWarsData.results.forEach((hero) => {
+      renderElement(Card(hero));
+    });
+    console.log(starWarsData);
+  } catch (error) {
+    console.log("Error message:", error.name);
+  }
 }
