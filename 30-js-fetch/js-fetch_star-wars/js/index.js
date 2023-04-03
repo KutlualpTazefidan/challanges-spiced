@@ -44,6 +44,10 @@ fetchDataAndRender();
 async function fetchDataAndRender() {
   try {
     const response = await fetch("https://swapi.dev/api/people/");
+    if (!response.ok) {
+      console.error("Bad Request");
+      return;
+    }
     const starWarsData = await response.json();
     starWarsData.results.forEach((hero) => {
       renderElement(Card(hero));
