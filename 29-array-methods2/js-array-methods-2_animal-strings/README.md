@@ -13,7 +13,7 @@ And now it's your turn: delete the value `null` and write code such that the var
 - `Array.includes()`
 - `Array.find()`
 - `Array.findIndex()`
-- `Array.sort()`
+- `Array.sort()`\*\*\*\*
 - `Array.some()`
 - `Array.every()`
 - `Array.reduce()`
