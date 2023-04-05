@@ -1,4 +1,4 @@
-# Color Clue
+\*\*\*\*# Color Clue
 
 This project is a color guessing game: The user is presented the name of a color. The user then tries to choose the actual color value using the color selector input.
 
