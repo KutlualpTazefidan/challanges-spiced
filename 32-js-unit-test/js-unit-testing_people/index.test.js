@@ -82,16 +82,96 @@ test("getPeopleByAge() returns an array of people of a certain age", () => {
   ]);
 });
 
-test('getPeopleNamesOlderThan() returns an array of people full names older than a certain age, e.g. "Luke Skywalker"', () => {});
+test('getPeopleNamesOlderThan() returns an array of people full names older than a certain age, e.g. "Luke Skywalker"', () => {
+  const result = getPeopleNamesOlderThan(people, 30);
+  expect(result).toEqual([
+    {
+      id: 3,
+      firstName: "Max",
+      lastName: "Mustermann",
+      age: 32,
+    },
+    {
+      id: 4,
+      firstName: "Erika",
+      lastName: "Musterfrau",
+      age: 38,
+    },
+  ]);
+});
 
-test("getPeopleByLastName() returns an array of people of a certain lastName", () => {});
+test("getPeopleByLastName() returns an array of people of a certain lastName", () => {
+  const result = getPeopleByLastName(people, "Doe");
+  expect(result).toEqual([
+    {
+      id: 1,
+      firstName: "Jane",
+      lastName: "Doe",
+      age: 21,
+    },
+    {
+      id: 2,
+      firstName: "John",
+      lastName: "Doe",
+      age: 18,
+    },
+  ]);
+});
 
 // Hint: use Array.prototype.find for the implementation
-test("findPersonById() returns the full object of a person", () => {});
+test("findPersonById() returns the full object of a person", () => {
+  const result = findPersonById(people, 3);
+  expect(result).toEqual({
+    id: 3,
+    firstName: "Max",
+    lastName: "Mustermann",
+    age: 32,
+  });
+});
 
 // Hint: implementation should use Array.prototype.some
-test("isAnyoneOlderThan() returns true if any person is older than the given age", () => {});
+test("isAnyoneOlderThan() returns true if any person is older than the given age", () => {
+  const result = isAnyoneOlderThan(people, 22);
+  expect(result).toEqual(true);
+});
 
-test("isAnyoneOlderThan() returns false if no person is older than the given age", () => {});
+test("isAnyoneOlderThan() returns false if no person is older than the given age", () => {
+  const result = isAnyoneOlderThan(people, 38);
+  expect(result).toEqual(false);
+});
 
-test("getFullNamesSortedByAge() returns an array of last names sorted by age", () => {});
+test("getFullNamesSortedByAge() returns an array of last names sorted by age", () => {
+  const result = getFullNamesSortedByAge(people);
+  expect(result).toEqual([
+    {
+      id: 2,
+      firstName: "John",
+      lastName: "Doe",
+      age: 18,
+    },
+    {
+      id: 1,
+      firstName: "Jane",
+      lastName: "Doe",
+      age: 21,
+    },
+    {
+      id: 5,
+      firstName: "Luke",
+      lastName: "Skywalker",
+      age: 23,
+    },
+    {
+      id: 3,
+      firstName: "Max",
+      lastName: "Mustermann",
+      age: 32,
+    },
+    {
+      id: 4,
+      firstName: "Erika",
+      lastName: "Musterfrau",
+      age: 38,
+    },
+  ]);
+});

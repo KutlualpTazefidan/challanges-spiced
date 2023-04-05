@@ -18,12 +18,22 @@ export function getPeopleByAge(people, age) {
   return people.filter((person) => person.age === age);
 }
 
-export function getPeopleNamesOlderThan(people, age) {}
+export function getPeopleNamesOlderThan(people, age) {
+  return people.filter((person) => person.age > age);
+}
 
-export function getPeopleByLastName(people, lastName) {}
+export function getPeopleByLastName(people, lastName) {
+  return people.filter((person) => person.lastName === lastName);
+}
 
-export function findPersonById(people, id) {}
+export function findPersonById(people, id) {
+  return people.find((person) => person.id === id);
+}
 
-export function isAnyoneOlderThan(people, age) {}
+export function isAnyoneOlderThan(people, age) {
+  return people.some((person) => person.age > age);
+}
 
-export function getFullNamesSortedByAge(people) {}
+export function getFullNamesSortedByAge(people) {
+  return people.sort((a, b) => a.age - b.age);
+}
