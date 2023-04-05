@@ -48,3 +48,13 @@ test("Both arguments are negative", () => {
   const result = multiply(-2, -4);
   expect(result).toBeGreaterThan(0);
 });
+
+// Test cases for division
+test("Divide 9:3", () => {
+  const result = divide(9, 3);
+  expect(result).toBe(3);
+});
+test("Second argument is 0", () => {
+  const result = divide(9, 0);
+  expect(result).toBe("You should not do this!");
+});
