@@ -28,4 +28,23 @@ test("Second value greater than the first one", () => {
   expect(result).toBeLessThan(0);
 });
 
-//
+// Test cases for multiply
+
+test("Multiply 2 and 4", () => {
+  const result = multiply(2, 4);
+  expect(result).toBe(8);
+});
+
+test("First argument is negative", () => {
+  const result = multiply(-2, 4);
+  expect(result).toBeLessThan(0);
+});
+
+test("Second argument is negative", () => {
+  const result = multiply(2, -4);
+  expect(result).toBeLessThan(0);
+});
+test("Both arguments are negative", () => {
+  const result = multiply(-2, -4);
+  expect(result).toBeGreaterThan(0);
+});
