@@ -9,7 +9,7 @@ function Avatar() {
       onClick={() => console.log("I could toggle a profile!")}
       aria-label="toggle profile"
     >
-      <Image imageSrc={avatar} imageAlt={"avatar"} />
+      <Image imageSrc={avatar} imageAlt="avatar" />
     </button>
   );
 }

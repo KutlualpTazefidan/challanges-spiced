@@ -5,7 +5,7 @@ import logo from "../img/logo.jpg";
 function Logo() {
   return (
     <a href="#">
-      <Image imageSrc={logo} imageAlt={"logo"} />
+      <Image imageSrc={logo} imageAlt="logo" />
     </a>
   );
 }
