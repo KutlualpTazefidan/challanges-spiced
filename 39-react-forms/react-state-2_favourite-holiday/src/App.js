@@ -1,9 +1,20 @@
 import React from "react";
 import "./styles.css";
+import { useState } from "react";
+import { useRef } from "react";
 
 export default function App() {
+  const [holiday, setHoliday] = useState("");
+  const [date, setDate] = useState("Well...");
+  const holidayInputRef = useRef(null);
   function handleSubmit(event) {
     event.preventDefault();
+    setHoliday(event.target.elements.holiday.value);
+    setDate(event.target.elements.date.value);
+    event.target.elements.holiday.value = "";
+    event.target.elements.date.value = "";
+    holidayInputRef.current.focus();
+    console.log("event", event);
   }
 
   return (
@@ -21,6 +32,7 @@ export default function App() {
           type="text"
           name="holiday"
           placeholder="e.g. Christmas"
+          ref={holidayInputRef}
         />
         <label htmlFor="date">Date: </label>
         <input id="date" type="date" name="date" />
@@ -30,10 +42,10 @@ export default function App() {
       </form>
       <h2>Output of Submitted Data</h2>
       <p>
-        Favourite Holiday: <span className="output">New Year</span>
+        Favourite Holiday: <span className="output">{holiday}</span>
       </p>
       <p>
-        Date: <span className="output">Well...</span>
+        Date: <span className="output">{date}</span>
       </p>
     </div>
   );
