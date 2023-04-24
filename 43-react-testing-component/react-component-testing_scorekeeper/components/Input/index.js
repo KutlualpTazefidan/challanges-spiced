@@ -23,6 +23,7 @@ export default function Input({
         value={value}
         onChange={onChange}
         required={required}
+        aria-label="input-field"
       />
     </>
   );
