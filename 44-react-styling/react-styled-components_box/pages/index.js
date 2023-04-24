@@ -1,10 +1,18 @@
 import BoxWithClassName from "../components/BoxWithClassName/BoxWithClassName.js";
+import BoxWithStyledComponents from "../components/BoxWithStyledComponents.js";
+import styled from "styled-components";
+const StyledMain = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
 
 export default function HomePage() {
   return (
-    <div>
+    <StyledMain>
       <BoxWithClassName />
       <BoxWithClassName isBlack />
-    </div>
+      <BoxWithStyledComponents />
+      <BoxWithStyledComponents isBlack />
+    </StyledMain>
   );
 }
