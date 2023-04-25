@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Light from "../Light";
-
+import { useLightStore } from "../../stores/lightStorage";
 const StyledLights = styled.ul`
   list-style-type: none;
   display: flex;
@@ -11,12 +11,13 @@ const StyledLights = styled.ul`
   justify-content: center;
 `;
 
-export default function Lights({ lights, toggleLight }) {
+export default function Lights() {
+  const { lights } = useLightStore();
   return (
     <StyledLights>
       {lights.map((light) => (
         <li key={light.id}>
-          <Light light={light} toggleLight={toggleLight} />
+          <Light light={light} />
         </li>
       ))}
     </StyledLights>
