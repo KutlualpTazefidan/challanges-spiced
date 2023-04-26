@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import { useLightStore } from "../../stores/lightStorage";
 
 const StyledLayout = styled.div`
   color: white;
@@ -26,9 +27,11 @@ const Content = styled.div`
   padding: 32px 0;
 `;
 
-export default function Layout({ children, isDimmed }) {
+export default function Layout({ children }) {
+  const isDimmed = useLightStore((state) => state.isItDimmed());
   return (
     <StyledLayout>
+      {console.log(isDimmed)}
       <Background isDimmed={isDimmed}>
         <StyledImage src="/images/home.jpg" fill alt="" />
       </Background>

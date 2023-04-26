@@ -1,25 +1,21 @@
 import styled from "styled-components";
 import Button from "../Button";
-
+import { useLightStore } from "../../stores/lightStorage";
 const StyledQuickActions = styled.div`
   display: flex;
   flex-direction: column;
   gap: 16px;
 `;
 
-export default function QuickActions({ lights, setLights }) {
-  function turnAllLights(status) {
-    // console.log(setLights);
-    setLights(lights.map((light) => ({ ...light, isOn: status })));
+export default function QuickActions() {
+  const { lights, setAllLights } = useLightStore();
 
-    // console.log(lights);
-  }
   return (
     <StyledQuickActions>
       <Button
         type="button"
         onClick={() => {
-          turnAllLights(false);
+          setAllLights(false);
         }}
       >
         Turn all lights off
@@ -27,7 +23,7 @@ export default function QuickActions({ lights, setLights }) {
       <Button
         type="button"
         onClick={() => {
-          turnAllLights(true);
+          setAllLights(true);
         }}
       >
         Turn all lights on
