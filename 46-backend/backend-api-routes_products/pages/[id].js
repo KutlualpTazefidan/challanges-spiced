@@ -5,13 +5,11 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export default function DetailsPage() {
   const router = useRouter();
   const id = router.query.id;
-  const { data } = useSWR("/api/products", fetcher);
+  const { data: selectedItem } = useSWR(`/api/products/${id}`, fetcher);
 
-  if (!data) {
+  if (!selectedItem) {
     return <h1>Loading...</h1>;
   }
-
-  const selectedItem = data.find((item) => item.id === id);
 
   return (
     <ul>
