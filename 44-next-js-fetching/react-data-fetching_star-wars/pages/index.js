@@ -1,24 +1,27 @@
 import styled from "styled-components";
 import Link from "next/link";
 import Layout from "../components/Layout";
-
+import useSWR from "swr";
 export default function HomePage() {
+  const URL = `https://swapi.dev/api/people/`;
+  const { data, error, isLoading } = useSWR(URL);
+  if (error) return <div>failed to load</div>;
+  console.log(data);
   return (
     <Layout>
       <h1>React Data Fetching: Star Wars</h1>
       <List>
-        <li>
-          <StyledLink href="/characters/1">Luke Skywalker</StyledLink>
-        </li>
-        <li>
-          <StyledLink href="/characters/2">C-3PO</StyledLink>
-        </li>
-        <li>
-          <StyledLink href="/characters/3">R2-D2</StyledLink>
-        </li>
-        <li>
-          <StyledLink href="/characters/4">Darth Vader</StyledLink>
-        </li>
+        {data ? (
+          data.results.map((person, i) => (
+            <li key={i}>
+              <StyledLink person={person} href={`/characters/${i + 1}`}>
+                {person.name}
+              </StyledLink>
+            </li>
+          ))
+        ) : (
+          <></>
+        )}
       </List>
     </Layout>
   );
