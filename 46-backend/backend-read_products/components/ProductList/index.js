@@ -6,7 +6,7 @@ import { StyledList } from "./ProductList.styled";
 export default function ProductList() {
   const router = useRouter();
   const { data } = useSWR("/api/products");
-
+  console.log(data);
   if (!data) {
     return <h1>Loading...</h1>;
   }
@@ -14,10 +14,10 @@ export default function ProductList() {
   return (
     <StyledList>
       {data.map((product) => (
-        <li key={product.id}>
+        <li key={product._id}>
           <StyledButton
             type="button"
-            onClick={() => router.push(`/${product.id}`)}
+            onClick={() => router.push(`/${product._id}`)}
           >
             {product.name}
           </StyledButton>

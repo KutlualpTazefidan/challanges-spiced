@@ -6,12 +6,13 @@ import { ProductCard } from "./Product.styled";
 export default function Product() {
   const router = useRouter();
   const { id } = router.query;
-
+  console.log("id", id);
   const { data } = useSWR(id ? `/api/products/${id}` : null);
 
   if (!data) {
     return <h1>Loading...</h1>;
   }
+  console.log("id data", data);
 
   return (
     <ProductCard>
